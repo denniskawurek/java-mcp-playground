@@ -1,0 +1,21 @@
+spring.ai.mcp.server:
+  type: SYNC
+#  base-url: /v1/mcp
+  sse-endpoint: connect
+  sse-message-endpoint: /message
+  enabled: true
+  request-timeout: 20s
+  stdio: false
+  name: spring-ai-mcp-server
+  version: 0.0.1
+  capabilities:
+    completion: true
+    tool: true
+    resource: true
+    prompt: true
+  resource-change-notification: true
+  prompt-change-notification: true
+  tool-change-notification: true
+  tool-response-mime-type.generateImage: image/png
+server:
+  port: 8000
